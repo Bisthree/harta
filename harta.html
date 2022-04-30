@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>www.dual-regional.ro - Hartă interactivă</title>
+    <meta content="Descrierea siteului" name="description">
+    <meta content="" name="keywords">
+    <link href="favicon.png" rel="icon">
+    <link href="apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="aos.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-icons.css" rel="stylesheet">
+    <link href="boxicons.min.css" rel="stylesheet">
+    <link href="glightbox.min.css" rel="stylesheet">
+    <link href="remixicon.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <link rel="stylesheet" href="leaflet-search.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script src="leaflet-search.js"></script>
+</head>
+
+<body>
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center">
+            <h1 class="logo"><a href="/">dual-regional.ro</a></h1>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/#hero">Acasă</a></li>
+                    <li><a class="nav-link scrollto" href="/#about">Despre proiect</a></li>
+                    <li><a class="nav-link scrollto" href="/#services">Despre învățământul dual</a></li>
+                    <li><a class="nav-link scrollto" href="/#faq">Întrebări frecvente</a></li>
+                    <li><a class="nav-link scrollto" href="/#team">Echipa</a></li>
+                    <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
+                    <li><a class="nav-link getstarted" target="_blank" href="/harta">Hartă</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <section class="inner-page">
+                    <div class="container">
+                        <p>
+                            <div id="map" style="height: 500px"></div>
+                        </p>
+                    </div>
+                </section>
+    </main>
+    <footer id="footer">
+
+
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Date de contact</h3>
+                        <strong>Adresă:</strong> Mun. Mangalia, Șos. Constaței, Nr. 49, Bl. B2g, Ap. 5 <br>
+                        <strong>Telefon:</strong> 0733 211 317<br>
+                        <strong>Email:</strong> asociatiaydea@gmail.com<br>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Link-uri utile</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/">Acasa</a></li>
+                            <li><i class="bx bx-chevron-right scrollto"></i> <a href="#about">Despre</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/harta">Harta</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Suntem prezenți și pe rețelele sociale</h4>
+                        <p></p>
+                        <div class="social-links mt-3">
+                            <a href="https://www.facebook.com/YDEA.Mangalia/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                &copy; Copyright <strong><span>invatamant-dual.ro</span></strong>. Toate drepturile rezervate.
+            </div>
+            <div class="credits">
+                Dezvoltat de către <a href="https://www.ar-cyber-lab.ro">AR Cyber Lab</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <script src="/assets/vendor/aos/aos.js"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/assets/vendor/php-email-form/validate.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="/assets/js/main.js"></script>
+    <script>
+        var data = [{
+                "loc": [43.81204483682479, 28.580670735325793],
+                "lat": 43.81204483682479,
+                "long": 28.580670735325793,
+                "type": "1",
+                "locuri": " S.C. PHOENICIA EXPRESS S.R.L. - Bucătar - <strong>locuri oferite:</strong> 14  <br />  S.C. PHOENICIA EXPRESS S.R.L. - Ospătar (chelner), vânzător în unități de alimentație  - <strong>locuri oferite:</strong> 14  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Bucătar <strong>Locuri</strong> 14 <br />  <strong>Calificare oferită: </strong> Ospătar (Chelner, vânzător în unități de alimentație) <strong>Locuri</strong> 14 <br /> ",
+                "telefon": "TELEFON",
+                "email": "",
+                "name": "Liceul Economic Mangalia"
+            },
+            {
+                "loc": [43.804960156842284, 28.20855822878669],
+                "lat": 43.804960156842284,
+                "long": 28.20855822878669,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Ion Banescu Mangalia"
+            },
+            {
+                "loc": [43.817536530981926, 28.20855822878669],
+                "lat": 43.817536530981926,
+                "long": 28.20855822878669,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Teoretic Negru Vodă"
+            },
+            {
+                "loc": [44.01718841909069, 28.454978998110033],
+                "lat": 44.01718841909069,
+                "long": 28.454978998110033,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic Topraisar"
+            },
+            {
+                "loc": [44.02038285509725, 28.65290705578047],
+                "lat": 44.02038285509725,
+                "long": 28.65290705578047,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Teoretic „Carmen Sylva” Eforie"
+            },
+            {
+                "loc": [44.055491461813375, 28.594606125099805],
+                "lat": 44.055491461813375,
+                "long": 28.594606125099805,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Teoretic „Emil Racoviță” Techirghiol"
+            },
+            {
+                "loc": [44.11118571711575, 28.556982463002107],
+                "lat": 44.11118571711575,
+                "long": 28.556982463002107,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Nicolae Dumitrescu” Cumpăna"
+            },
+            {
+                "loc": [44.08586348771044, 27.957138917167228],
+                "lat": 44.08586348771044,
+                "long": 27.957138917167228,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Jean Dinu” Adamclisi"
+            },
+            {
+                "loc": [44.089827580995596, 28.00827524413404],
+                "lat": 44.089827580995596,
+                "long": 28.00827524413404,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Nicolae Istrățoiu” Deleni"
+            },
+            {
+                "loc": [44.175726674997385, 28.419388450245222],
+                "lat": 44.175726674997385,
+                "long": 28.419388450245222,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Teoretic Murfatlar"
+            },
+            {
+                "loc": [44.06325903450349, 28.234959971122365],
+                "lat": 44.06325903450349,
+                "long": 28.234959971122365,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Cobadin"
+            },
+            {
+                "loc": [44.06644307878159, 27.696326619593066],
+                "lat": 44.06644307878159,
+                "long": 27.696326619593066,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Teoretic Băneasa"
+            },
+            {
+                "loc": [44.02139576723338, 27.780502327026824],
+                "lat": 44.02139576723338,
+                "long": 27.780502327026824,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Radu Prișcu” Dobromir"
+            },
+            {
+                "loc": [44.105865, 27.369360],
+                "lat": 44.105865,
+                "long": 27.369360,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul „Regele Carol I” Ostrov"
+            },
+            {
+                "loc": [44.222980683452754, 28.4087878441370],
+                "lat": 44.222980683452754,
+                "long": 28.4087878441370,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Agricol Poarta Albă"
+            },
+            {
+                "loc": [44.25502127462362, 28.323322155786244],
+                "lat": 44.25502127462362,
+                "long": 28.323322155786244,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Colegiul „Dobrogea” Castelu"
+            },
+            {
+                "loc": [44.26069963453787, 28.265755303654913],
+                "lat": 44.26069963453787,
+                "long": 28.265755303654913,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": " <strong>Calificare oferită: </strong> Electrician exploatare joasă tensiune <strong>Locuri</strong> 12 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Colegiul Tehnic „Nicolae Titulescu” Medgidia"
+            },
+            {
+                "loc": [44.24355783328002, 28.295880357018383],
+                "lat": 44.24355783328002,
+                "long": 28.295880357018383,
+                "type": "1",
+                "locuri": " CRH - Electrician exploatare joasa tensiune - <strong>locuri oferite:</strong> 10  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Electrician exploatare joasă tensiune <strong>Locuri</strong> 10 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Dragomir Hurmuzescu” Medgidia"
+            },
+            {
+                "loc": [44.33376306877482, 28.037462494424904],
+                "lat": 44.33376306877482,
+                "long": 28.037462494424904,
+                "type": "1",
+                "locuri": " NUCLEARELECTRICA - Electrician exploatare joasa tensiune - <strong>locuri oferite:</strong> 10  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Electrician exploatare joasă tensiune <strong>Locuri</strong> 10 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Axiopolis” Cernavodă"
+            },
+            {
+                "loc": [44.36350324629251, 28.4608916560182],
+                "lat": 44.36350324629251,
+                "long": 28.4608916560182,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Teoretic „Mihail Kogălniceanu” Mihail Kogălniceanu"
+            },
+            {
+                "loc": [44.388416381804525, 28.380698313046217],
+                "lat": 44.388416381804525,
+                "long": 28.380698313046217,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „I. C. Brătianu” Nicolae Bălcescu"
+            },
+            {
+                "loc": [44.5300952818891, 28.232022898792824],
+                "lat": 44.5300952818891,
+                "long": 28.232022898792824,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic Crucea"
+            },
+            {
+                "loc": [44.704148928176366, 27.936388513135828],
+                "lat": 44.704148928176366,
+                "long": 27.936388513135828,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Carsium” Hârșova"
+            },
+            {
+                "loc": [44.71859668240089, 27.98403685423945],
+                "lat": 44.71859668240089,
+                "long": 27.98403685423945,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic Ciobanu"
+            },
+            {
+                "loc": [44.555855709375905, 28.563346234343495],
+                "lat": 44.555855709375905,
+                "long": 28.563346234343495,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic Cogealac"
+            },
+            {
+                "loc": [44.64312666787518, 28.6785857448188],
+                "lat": 44.64312666787518,
+                "long": 28.6785857448188,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Mihai Viteazul”"
+            },
+            {
+                "loc": [44.31966904288454, 28.610815455787776],
+                "lat": 44.31966904288454,
+                "long": 28.610815455787776,
+                "type": "1",
+                "locuri": " S.C. PHOENICIA EXPRESS S.R.L. - Lucrător hotelier - <strong>locuri oferite:</strong> 30  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Lucrător hotelier <strong>Locuri</strong> 30 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Lazăr Edeleanu” Năvodari"
+            },
+            {
+                "loc": [44.25762585774617, 28.560628619758372],
+                "lat": 44.25762585774617,
+                "long": 28.560628619758372,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Ion Podaru” Ovidiu"
+            },
+            {
+                "loc": [44.16714428366666, 28.58088851530061],
+                "lat": 44.16714428366666,
+                "long": 28.58088851530061,
+                "type": "1",
+                "locuri": " SC Tehnotrans Feroviar SRL  - Electromecanic material rulant  - <strong>locuri oferite:</strong> 24  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Electromecanic material rulant  <strong>Locuri</strong> 24 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Gheorghe Duca” Constanța"
+            },
+            {
+                "loc": [44.171746099418556, 28.58167165578406],
+                "lat": 44.171746099418556,
+                "long": 28.58167165578406,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Colegiul Tehnic „Pontica” Constanța"
+            },
+            {
+                "loc": [44.15976310421022, 28.61383051345415],
+                "lat": 44.15976310421022,
+                "long": 28.61383051345415,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Dimitrie Leonida” Constanța"
+            },
+            {
+                "loc": [44.157569524109974, 28.613696505218627],
+                "lat": 44.157569524109974,
+                "long": 28.613696505218627,
+                "type": "1",
+                "locuri": " S.C. PHOENICIA EXPRESS S.R.L. - Ospătar (chelner), vânzător în unități de alimentație  - <strong>locuri oferite:</strong> 28  <br />  S.C. PHOENICIA EXPRESS S.R.L. - Bucătar - <strong>locuri oferite:</strong> 14  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Brutar-patiser-preparator produse făinoase <strong>Locuri</strong> 15 <br />  <strong>Calificare oferită: </strong> Ospătar (chelner), vânzător în unități de alimentație  <strong>Locuri</strong> 15 <br />  <strong>Calificare oferită: </strong> Ospătar (chelner), vânzător în unități de alimentație  <strong>Locuri</strong> 28 <br />  <strong>Calificare oferită: </strong> Bucătar <strong>Locuri</strong> 14 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Gheorghe Miron Costin” Constanța"
+            },
+            {
+                "loc": [44.14587178175432, 28.62716477823821],
+                "lat": 44.14587178175432,
+                "long": 28.62716477823821,
+                "type": "1",
+                "locuri": " Santierul Naval Constanta - Lăcătuș construcții metalice si nave - <strong>locuri oferite:</strong> 28  <br />  Santierul Naval Constanta - Tubulator naval - <strong>locuri oferite:</strong> 28  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Lăcătuș construcții metalice si nave <strong>Locuri</strong> 28 <br />  <strong>Calificare oferită: </strong> Tubulator naval <strong>Locuri</strong> 28 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul de Marină „Alexandru Ioan Cuza” Constanța"
+            },
+            {
+                "loc": [44.16260531708545, 28.631984935967573],
+                "lat": 44.16260531708545,
+                "long": 28.631984935967573,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „C. A. Rosetti” Constanța"
+            },
+            {
+                "loc": [44.17473097883955, 28.642645957419575],
+                "lat": 44.17473097883955,
+                "long": 28.642645957419575,
+                "type": "1",
+                "locuri": " UMEX - Mecanic utilaje și instalații în industrie - <strong>locuri oferite:</strong> 10  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Mecanic utilaje și instalații în industrie <strong>Locuri</strong> 10 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Ioan N. Roman” Constanța"
+            },
+            {
+                "loc": [44.18415418570356, 28.650633923313446],
+                "lat": 44.18415418570356,
+                "long": 28.650633923313446,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Colegiul Comercial „Carol I” Constanța"
+            },
+            {
+                "loc": [44.19124360229932, 28.639648833696626],
+                "lat": 44.19124360229932,
+                "long": 28.639648833696626,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Colegiul Tehnic „Tomis” Constanța"
+            },
+            {
+                "loc": [4.19008363847574, 28.64229387653663],
+                "lat": 4.19008363847574,
+                "long": 28.64229387653663,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic Ucecom „Spiru Haret” Constanța"
+            },
+            {
+                "loc": [44.19060344602485, 28.621073061521916],
+                "lat": 44.19060344602485,
+                "long": 28.621073061521916,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Centrul Școlar de Educație Incluzivă „Albatros” Constanța"
+            },
+            {
+                "loc": [44.18426356326421, 28.63502567413007],
+                "lat": 44.18426356326421,
+                "long": 28.63502567413007,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic de Electrotehnică și Telecomunicații Constanța"
+            },
+            {
+                "loc": [44.2095630128472, 28.644228637504234],
+                "lat": 44.2095630128472,
+                "long": 28.644228637504234,
+                "type": "1",
+                "locuri": " E-Distribuție Dobrogea S.A. - Electrician exploatare centrale, stații și rețele electrice - <strong>locuri oferite:</strong> 28  <br />   ",
+                "calificari": " <strong>Calificare oferită: </strong> Electrician exploatare centrale, stații și rețele electrice <strong>Locuri</strong> 28 <br /> ",
+                "telefon": "",
+                "email": "",
+                "name": "Colegiul Tehnic Energetic Constanța"
+            },
+            {
+                "loc": [44.21355322318026, 28.62636306405266],
+                "lat": 44.21355322318026,
+                "long": 28.62636306405266,
+                "type": "1",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Liceul Tehnologic „Virgil Madgearu” Constanța"
+            },
+            {
+                "loc": [44.18263086942197, 28.649690387595584],
+                "lat": 44.18263086942197,
+                "long": 28.649690387595584,
+                "type": "2",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "Santierul Naval Constanta"
+            },
+            {
+                "loc": [44.24212461255992, 28.308505913644463],
+                "lat": 44.24212461255992,
+                "long": 28.308505913644463,
+                "type": "2",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "CRH"
+            },
+            {
+                "loc": [44.15581193475859, 28.642838769461463],
+                "lat": 44.15581193475859,
+                "long": 28.642838769461463,
+                "type": "2",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "UMEX"
+            },
+            {
+                "loc": [44.18653388651311, 28.64033290036287],
+                "lat": 44.18653388651311,
+                "long": 28.64033290036287,
+                "type": "2",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "E-Distribuție Dobrogea S.A."
+            },
+            {
+                "loc": [44.521551481037655, 26.030913096568888],
+                "lat": 44.521551481037655,
+                "long": 26.030913096568888,
+                "type": "2",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "S.C. PHOENICIA EXPRESS S.R.L."
+            },
+            {
+                "loc": [44.317607612856214, 28.05780525794016],
+                "lat": 44.317607612856214,
+                "long": 28.05780525794016,
+                "type": "2",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "NUCLEARELECTRICA"
+            },
+            {
+                "loc": [44.169130231263416, 28.649150898411488],
+                "lat": 44.169130231263416,
+                "long": 28.649150898411488,
+                "type": "2",
+                "locuri": "  ",
+                "calificari": "",
+                "telefon": "",
+                "email": "",
+                "name": "SC Tehnotrans Feroviar SRL "
+            }
+        ];
+        var mapOptions = {
+            center: [44.15856343854312, 28.619384765625],
+            zoom: 9
+        };
+        var map = L.map("map", mapOptions);
+
+        var baselayer = L.tileLayer('http://{s}.google.com/vt/lyrs=p&x={x}&y={y}&z={z}', {
+            attribution: "Dezvoltat de către AR Cyber Lab - &copy; 2021",
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+        baselayer.addTo(map);
+
+        var markersLayer = new L.LayerGroup();
+        var resultsLayer = L.featureGroup();
+
+        map.addLayer(markersLayer);
+        map.addLayer(resultsLayer);
+        const results = [];
+
+        var controlSearch = new L.Control.Search({
+            position: "topleft",
+            sourceData: searchByAjax,
+            textPlaceholder: "Scrie o meserie ...",
+            initial: false,
+            zoom: 12,
+            marker: false,
+            tipAutoSubmit: false,
+            buildTip: (text, loc, telefon) => {
+
+                results.push({
+                    loc,
+                    text,
+                    telefon
+                });
+                const tip = L.DomUtil.create("div");
+                tip.innerHTML = text;
+                L.DomEvent.disableClickPropagation(tip)
+                    .on(tip, "click", L.DomEvent.stop, controlSearch)
+                    .on(
+                        tip,
+                        "click",
+                        function(e) {
+                            controlSearch._input.value = text;
+                            controlSearch._handleAutoresize();
+                            controlSearch._input.focus();
+                            controlSearch._hideTooltip();
+                            controlSearch._handleSubmit();
+                        },
+                        controlSearch
+                    );
+                return tip;
+            },
+            moveToLocation: results.length > 1 ?
+                () => {} :
+                L.Control.Search._defaultMoveToLocation
+        });
+
+        controlSearch.on('search:locationfound', function(e) {
+
+        }).on('search:collapsed', function(e) {
+
+        });
+
+
+        var lista_educational = data
+            .filter((point) => point.type === "1")
+            .map((point) =>
+                L.marker(point.loc, {
+                    title: point.title
+                }).bindPopup(
+                    '<strong>' + point.name + '</strong>' + '<br />' +
+                    '<strong>Telefon</strong>:' + point.telefon + '<br />' +
+                    '<strong>Email</strong>:' + point.email + '<br />' +
+                    '<strong>Calificări oferite: </strong><br /> <br />' + point.calificari + '<br />' +
+                    '<strong>Parteneriate</strong>: <br />' + point.locuri)
+            );
+
+        var lista_jobs = data
+            .filter((point) => point.type === "2")
+            .map((point) =>
+                L.marker(point.loc, {
+                    title: point.title
+                }).bindPopup(
+                    '<strong>' + point.name + '</strong>' + '<br />' +
+                    '<strong>Telefon</strong>:' + point.telefon + '<br />' +
+                    '<strong>Email</strong>:' + point.email + '<br />' + '<strong>' + point.title + '</strong>' + '<br />' +
+                    '<strong>Telefon</strong>:' + point.telefon + '<br />' +
+                    '<strong>Email</strong>:' + point.email + '<br />')
+            );
+
+        var educational = L.layerGroup(lista_educational).addTo(map);
+        var jobs = L.layerGroup(lista_jobs);
+
+        map.addControl(controlSearch);
+
+        [educational, jobs].forEach((group) => {
+            group.on("add", () => {
+                group.getLayers().forEach((layer) => {
+                    markersLayer.addLayer(layer);
+                });
+                console.log(markersLayer);
+                controlSearch.setLayer(markersLayer);
+            });
+            group.on("remove", () => {
+                group.getLayers().forEach((layer) => {
+                    markersLayer.removeLayer(layer);
+                });
+                markersLayer.clearLayers();
+                console.log(markersLayer);
+                controlSearch.setLayer(markersLayer);
+            });
+        });
+
+
+        const getFullItem = (lat, long) => {
+            return data.find((item) => item.lat === lat && item.long === long);
+        };
+
+
+        const buildPopupText = (item) => {
+            return `
+    <h5>${item.name}</h5>
+    <p>${item.title}</p>
+    <p>${item.calificari}</p>
+
+    <p>Telefon: ${item.telefon}</p>
+    <p>Website: ${item.website}</p>
+    <p>Parteneriate: ${item.locuri}</p>
+
+  `;
+        };
+
+        const inputEl = document.querySelector("input.search-input");
+
+        inputEl.addEventListener("keypress", function(e) {
+            if (e.key === "Enter" && results.length) {
+                markersLayer.remove();
+                educational.remove();
+                results.forEach((result) => {
+                    const marker = L.marker(result.loc);
+                    const originalItem = getFullItem(result.loc.lat, result.loc.lng);
+                    marker.bindPopup(buildPopupText(originalItem));
+                    resultsLayer.addLayer(marker);
+                });
+                map.fitBounds(resultsLayer.getBounds());
+            }
+        });
+
+        var overlayMaps = {
+            "Instituții de învățământ": educational,
+            "Locuri de muncă": jobs
+        };
+
+        var categorii = L.control
+            .layers(null, overlayMaps, {
+                collapsed: false
+            })
+            .addTo(map);
+
+        function searchByAjax(text, callResponse) {
+            return $.ajax({
+                url: '/ajax',
+                type: 'GET',
+                data: {
+                    q: text
+                },
+                dataType: 'json',
+                success: function(json) {
+                    callResponse(json);
+                }
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+</body>
+
+</html>
